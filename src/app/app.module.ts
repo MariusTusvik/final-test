@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    
+
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
@@ -40,6 +41,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatButtonModule,
     MatCheckboxModule,
     MatSnackBarModule,
+    GoogleMapsModule
+ 
   ],
   providers: [],
   bootstrap: [AppComponent],

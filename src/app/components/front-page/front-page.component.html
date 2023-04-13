@@ -188,6 +188,48 @@
 <!-- ---------------------------------------------------------------------------- -->
 
 <div class="grid grid-cols-2">
+  <div class="mx-auto my-auto">
+    <p class="mb-8 text-3xl font-semibold">We are located at:</p>
+    <div class="">
+      <div class="mb-10 flex">
+        <div
+          class="w-80 bg-offWhite py-6 text-center text-xl text-black hover:bg-gray/60 hover:text-offWhite active:text-white"
+          [class]="activeTab === 'laboratory' ? 'bg-gray-400' : 'bg-gray-200'"
+          (click)="setActiveTab('laboratory')"
+        >
+          Laboratory
+        </div>
+        <div
+          class="w-80 bg-offWhite py-6 text-center text-xl text-black hover:bg-gray/60 hover:text-offWhite active:text-white"
+          [class]="activeTab === 'office' ? 'bg-gray-400' : 'bg-gray-200'"
+          (click)="setActiveTab('office')"
+        >
+          Office
+        </div>
+      </div>
+
+      <div class="space-y-5 text-xl" *ngIf="activeTab === 'laboratory'">
+        <p class="text-xl font-semibold">Laboratory address</p>
+        <p>Moscow, Lefortovskaya embankment, building 1</p>
+        <p>Power Engineering MSTU im. N.E. Bauman</p>
+      </div>
+      <div class="space-y-5 text-xl" *ngIf="activeTab === 'office'">
+        <p class="text-xl font-semibold">Office adress</p>
+        <p>Moscow, Baumanskaya 68/8 building 1</p>
+        <p>Phone: +7 495 249-11-13</p>
+      </div>
+    </div>
+  </div>
+    <google-map
+      [center]="center"
+      [zoom]="zoom"
+      
+      width="100%"
+    ></google-map>
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+
+<div class="grid grid-cols-2">
   <div class="bg-image-contact flex items-center justify-center">
     <p class="font-sofachrome-italic text-7xl">BAUM AI</p>
   </div>
@@ -201,7 +243,7 @@
 
 <!-- ---------------------------------------------------------------------------- -->
 
-<div class="mx-auto flex max-w-7xl justify-between font-semibold py-10 text-xl">
+<div class="mx-auto flex max-w-7xl justify-between py-10 text-xl font-semibold">
   <div class="flex flex-col">
     <a class="hover:text-cyan">About Comaany</a>
     <a class="hover:text-cyan">Our Team</a>
