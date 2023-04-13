@@ -1,12 +1,14 @@
-<div class="flex w-full pr-20 mx-20">
+<div class="mx-10 flex w-full pr-20 border-l-2 border-l-lightgray">
   <img
     src="../../../assets/logos/logo-black.png"
     alt=""
-    class="object-contain py-4 pr-4"
+    class="object-contain py-4 pr-6"
   />
 
-  <div class="border-l-2 border-lightgray flex flex-col items-center w-full">
-    <div class="flex justify-end w-full py-2 gap-x-6 text-lightgray">
+  <div
+    class="flex w-full flex-col items-center border-x-2 border-lightgray"
+  >
+    <div class="flex w-full justify-end gap-x-6 py-2 px-8 text-lightgray">
       <a href="">About us</a>
       <a href="">Our Team</a>
       <a href="">News</a>
@@ -14,14 +16,40 @@
     </div>
 
     <div
-      class="grid grid-cols-2 w-full border-lightgray divide-lightgray border-t-2 items-center"
+      class="grid w-full grid-cols-2 items-center border-t-2 border-lightgray"
     >
-      <div class="flex justify-between px-4 border-lightgray border-r-2 py-2">
+
+
+      <div class="flex justify-between border-r-2 border-lightgray px-4 py-4">
         <p>lorum ipsum banan?</p>
-        <img src="../../../assets/icons/search.svg" alt="" class="w-6 h-6" />
+        <img src="../../../assets/icons/search.svg" alt="" class="h-6 w-6"/>
       </div>
-      <div class="flex justify-end py-2">
-        <app-drop-down></app-drop-down>
+
+
+      <div class="flex justify-between pl-4 pr-8">
+        <app-drop-down
+          [title]="'Storage'"
+          [menuItems]="['STORAGE 1', 'STORAGE 2', 'STORAGE 3']"
+        />
+        <app-drop-down [title]="'AI'" [menuItems]="['AI 1', 'AI 2']" />
+        <app-drop-down
+          [title]="'Community'"
+          [menuItems]="[
+            'COMMUNITY 1',
+            'COMMUNITY 2',
+            'COMMUNITY 3',
+            'COMMUNITY 4'
+          ]"
+        />
+        <button
+          class="rounded bg-white px-4 py-2 text-black hover:text-cyan focus:text-cyan"
+        >
+          Education
+        </button>
+        <app-drop-down
+          [title]="'About company'"
+          [menuItems]="['ABOUT US', 'CONTACT US', 'NEWS', 'JOBS']"
+        />
       </div>
     </div>
   </div>
