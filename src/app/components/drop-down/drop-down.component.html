@@ -1,0 +1,37 @@
+<div class="flex justify-end py-2">
+  <div class="inline-block text-left">
+    <button class="" [matMenuTriggerFor]="Storage">
+      <p class="flex items-center">
+        Storage
+        <img
+          src="../../../assets/icons/chevron-right.svg"
+          alt=""
+          class="h-6 w-6 transition duration-500 ease-in-out {menuTrigger.menuOpen ? '' : 'rotate-90' }"
+        />
+      </p>
+    </button>
+    <mat-menu #Storage="matMenu" yPosition="below" xPosition="after">
+            <button mat-menu-item>Storage 1</button>
+            <button mat-menu-item>Storage 2</button>
+            <button mat-menu-item>Storage 3</button>
+    </mat-menu>
+  </div>
+</div>
+
+
+<!--  <div class="relative inline-block text-left">
+  <button (click)="menuTrigger.toggleMenu()" mat-button [matMenuTriggerFor]="Storage" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none">
+    Dropdown
+    <span class="ml-2 transition-transform duration-300" [ngClass]="{'rotate-180': menuTrigger.menuOpen}">
+      <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+      </svg>
+    </span>
+  </button>
+
+  <mat-menu #Storage="matMenu" [xPosition]="'after'" [yPosition]="'below'" [overlapTrigger]="false">
+    <button mat-menu-item>Action 1</button>
+    <button mat-menu-item>Action 2</button>
+    <button mat-menu-item>Action 3</button>
+  </mat-menu>
+</div> -->

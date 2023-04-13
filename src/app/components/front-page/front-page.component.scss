@@ -1,0 +1,14 @@
+.clip-path {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.store-info-img {
+  background-image: url(../../../assets/images/image2.png);
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+}
+
+.store-info-img-bg {
+  clip-path: polygon(95% 0, 100% 0, 75% 100%, 70% 100%);
+  background: rgba(23, 60, 62, 0.76);
+  min-height: 450px;
+}
