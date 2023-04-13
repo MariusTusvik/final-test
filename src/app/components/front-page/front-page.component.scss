@@ -69,3 +69,15 @@ clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 15% 50%);}
   z-index: 5;
   position: relative;
 }
+
+.bg-image-contact {
+  background-image: url(../../../assets/images/image3.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+  min-height: 600px;
+  right: 3rem;
+  z-index: 5;
+  position: relative;
+}

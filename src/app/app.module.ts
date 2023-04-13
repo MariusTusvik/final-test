@@ -9,6 +9,14 @@ import { FrontPageComponent } from './components/front-page/front-page.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
 import { DropDownComponent } from './components/drop-down/drop-down.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +24,8 @@ import { DropDownComponent } from './components/drop-down/drop-down.component';
     NavbarComponent,
     FooterComponent,
     FrontPageComponent,
-    DropDownComponent
+    DropDownComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,9 +33,15 @@ import { DropDownComponent } from './components/drop-down/drop-down.component';
     BrowserAnimationsModule,
     MatMenuModule,
     
-
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatSnackBarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
