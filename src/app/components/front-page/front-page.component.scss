@@ -1,10 +1,10 @@
 .img-crop1-img {
-  background-image: url(../../../assets/images/image2.png);
+  background-image: url(../../../assets/images/landing.jpg);
 clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 15% 50%);}
 
 .img-crop1-img-bg {
   clip-path: polygon(0 0, 5% 0, 20% 50%, 5% 100%, 0 100%, 0 50%);
-  min-height: 450px;
+  min-height: 600px;
 }
 
 .img-crop2-img {
@@ -45,4 +45,27 @@ clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 15% 50%);}
   background-repeat: no-repeat;
   background-position: center;
   min-height: 450px;
+}
+
+.bg-image-ai-platform {
+  background-image: url(../../../assets/images/cube1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+  min-height: 600px;
+  right: 3rem;
+  z-index: 5;
+  position: relative;
+}
+.bg-image-community {
+  background-image: url(../../../assets/images/cube2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+  min-height: 600px;
+  left: 3rem;
+  z-index: 5;
+  position: relative;
 }
