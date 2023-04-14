@@ -207,9 +207,7 @@
           class="w-80 py-6 text-center text-xl text-black"
           [ngClass]="{
             'gray-background': activeTab === 'laboratory',
-            'offWhite-background': activeTab !== 'laboratory',
-            'hover-gray-background': activeTab !== 'laboratory',
-            'no-hover': activeTab === 'laboratory'
+            'offWhite-background': activeTab !== 'laboratory'
           }"
           (click)="setActiveTab('laboratory')"
         >
@@ -219,15 +217,14 @@
           class="w-80 py-6 text-center text-xl text-black"
           [ngClass]="{
             'gray-background': activeTab === 'office',
-            'offWhite-background': activeTab !== 'office',
-            'hover-gray-background': activeTab !== 'office',
-            'no-hover': activeTab === 'office'
+            'offWhite-background': activeTab !== 'office'
           }"
           (click)="setActiveTab('office')"
         >
           Office
         </button>
       </div>
+
       <div class="space-y-5 text-xl" *ngIf="activeTab === 'laboratory'">
         <p class="text-xl font-semibold">Laboratory address</p>
         <p>Moscow, Lefortovskaya embankment, building 1</p>
