@@ -69,6 +69,27 @@ clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 15% 50%);}
   z-index: 5;
   position: relative;
 }
+/* ------------------------------------------------------ */
+
+.offWhite-background {
+  background-color: #f7f8fa;
+}
+
+.gray-background {
+  background-color: #505356;
+  color: white;
+}
+
+.hover-gray-background:hover {
+    background-color: rgb(80 83 86 / 0.6);
+    color: white;
+}
+.no-hover {
+  background-color: #505356 !important;
+}
+
+/* ------------------------------------------------------ */
+
 
 .bg-image-contact {
   background-image: url(../../../assets/images/image3.png);
