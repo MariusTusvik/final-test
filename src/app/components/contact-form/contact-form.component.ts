@@ -23,7 +23,7 @@ export class ContactFormComponent implements OnInit {
 
   onSubmit() {
     if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
+      console.log("Contact information", this.contactForm.value);
       // Send form data to your server here
       this.snackBar.open('Success! Your form has been submitted.', 'Close', {
         duration: 7000,
