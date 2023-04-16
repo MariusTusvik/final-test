@@ -1,14 +1,12 @@
-<div class="mx-10 flex w-full pr-20 border-l-2 border-l-lightgray">
+<div class="mx-10 flex w-full border-l-2 border-l-lightgray pr-20">
   <img
     src="../../../assets/logos/logo-black.png"
     alt=""
     class="object-contain py-4 pr-6"
   />
 
-  <div
-    class="flex w-full flex-col items-center border-x-2 border-lightgray"
-  >
-    <div class="flex w-full justify-end gap-x-10 py-2 px-8 text-lightgray">
+  <div class="flex w-full flex-col items-center border-x-2 border-lightgray">
+    <div class="flex w-full justify-end gap-x-10 px-8 py-2 text-lightgray">
       <a href="" class="hover:text-cyan">About us</a>
       <a href="" class="hover:text-cyan">Our Team</a>
       <a href="" class="hover:text-cyan">News</a>
@@ -18,13 +16,25 @@
     <div
       class="grid w-full grid-cols-2 items-center border-t-2 border-lightgray"
     >
-
-
       <div class="flex justify-between border-r-2 border-lightgray px-4 py-4">
-        <p>lorum ipsum banan?</p>
-        <img src="../../../assets/icons/search.svg" alt="" class="h-6 w-6"/>
+        <input
+          type="text"
+          [matAutocomplete]="auto"
+          placeholder="What are you looking for?"
+          class="w-full "
+        />
+        <button class="rounded-full hover:bg-lightgray active:bg-lightgray/60 py-1 px-1" [routerLink]="">
+          <img src="../../../assets/icons/search.svg" alt="" class="h-6 w-6" />
+        </button>
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option
+            *ngFor="let searchHits of searchHits"
+            [value]="searchHits.title"
+          >
+            {{ searchHits.title }}
+          </mat-option>
+        </mat-autocomplete>
       </div>
-
 
       <div class="flex justify-between pl-4 pr-8">
         <app-drop-down

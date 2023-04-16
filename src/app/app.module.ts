@@ -19,6 +19,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { EmployeesComponent } from './components/employees/employees.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+
 
 
 @NgModule({
@@ -46,6 +48,7 @@ import { EmployeesComponent } from './components/employees/employees.component';
     MatSnackBarModule,
     GoogleMapsModule,
     MatTabsModule,
+    MatAutocompleteModule,
  
   ],
   providers: [],
