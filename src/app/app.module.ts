@@ -1,3 +1,4 @@
+import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -17,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { EmployeesComponent } from './components/employees/employees.component';
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     FrontPageComponent,
     DropDownComponent,
     ContactFormComponent,
+    EmployeesComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     MatButtonModule,
     MatCheckboxModule,
     MatSnackBarModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    MatTabsModule,
  
   ],
   providers: [],
