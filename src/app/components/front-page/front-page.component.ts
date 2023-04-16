@@ -7,6 +7,19 @@ type Tab = 'laboratory' | 'office';
   styleUrls: ['./front-page.component.scss'],
 })
 export class FrontPageComponent {
+  moscowTime!: string;
+  moscowTimeZone = 'Europe/Moscow';
+
+
+  updateTime() {
+    const now = new Date();
+    this.moscowTime = new Intl.DateTimeFormat('en-US', {
+      timeZone: this.moscowTimeZone,
+      dateStyle: 'medium',
+      timeStyle: 'short',
+    }).format(now);
+  }
+
   activeTab: Tab = 'laboratory';
   center!: google.maps.LatLngLiteral;
   zoom = 12;
@@ -18,6 +31,10 @@ export class FrontPageComponent {
 
   constructor() {
     this.setCenter();
+    this.updateTime();
+    setInterval(() => {
+      this.updateTime();
+    }, 1000);
   }
 
   setActiveTab(tab: Tab): void {
