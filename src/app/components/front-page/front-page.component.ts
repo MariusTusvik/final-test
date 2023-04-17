@@ -1,15 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 type Tab = 'laboratory' | 'office';
 
 @Component({
   selector: 'app-front-page',
   templateUrl: './front-page.component.html',
   styleUrls: ['./front-page.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class FrontPageComponent {
+  constructor() {
+    this.setCenter();
+    this.updateTime();
+    setInterval(() => {
+      this.updateTime();
+    }, 1000);
+  }
+
+  /* ------------------------------------- Location Section ------------------------------------- */
+
   moscowTime!: string;
   moscowTimeZone = 'Europe/Moscow';
-
 
   updateTime() {
     const now = new Date();
@@ -20,6 +30,8 @@ export class FrontPageComponent {
     }).format(now);
   }
 
+  /* ------------------------------------- Contact Section ------------------------------------- */
+
   activeTab: Tab = 'laboratory';
   center!: google.maps.LatLngLiteral;
   zoom = 12;
@@ -28,15 +40,7 @@ export class FrontPageComponent {
     laboratory: { lat: 40.73061, lng: -73.935242 },
     office: { lat: 40.712776, lng: -74.005974 },
   };
-
-  constructor() {
-    this.setCenter();
-    this.updateTime();
-    setInterval(() => {
-      this.updateTime();
-    }, 1000);
-  }
-
+  
   setActiveTab(tab: Tab): void {
     this.activeTab = tab;
     this.setCenter();
