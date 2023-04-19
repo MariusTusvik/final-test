@@ -16,7 +16,7 @@ export class FrontPageComponent {
     }, 1000);
   }
 
-  /* ------------------------------------- Location Section ------------------------------------- */
+  /* ------------------------------------- Landing Section ------------------------------------- */
 
   moscowTime!: string;
   moscowTimeZone = 'Europe/Moscow';
@@ -30,7 +30,7 @@ export class FrontPageComponent {
     }).format(now);
   }
 
-  /* ------------------------------------- Contact Section ------------------------------------- */
+  /* ------------------------------------- Location Section ------------------------------------- */
 
   activeTab: Tab = 'laboratory';
   center!: google.maps.LatLngLiteral;
