@@ -20,6 +20,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { EmployeesComponent } from './components/employees/employees.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { RoutingTestComponent } from './components/routing-test/routing-test.component';
 
 
 
@@ -32,6 +33,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     DropDownComponent,
     ContactFormComponent,
     EmployeesComponent,
+    RoutingTestComponent,
   ],
   imports: [
     BrowserModule,

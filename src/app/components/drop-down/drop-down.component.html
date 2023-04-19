@@ -25,7 +25,7 @@
       *ngIf="isOpen"
       class="absolute right-0 z-10 mt-2 w-36 flex origin-top-right flex-col rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5"
     >
-      <button class="px-4 py-3 text-base text-black hover:bg-lightgray focus:bg-lightgray/40" *ngFor="let menuItem of menuItems">
+      <button class="px-4 py-3 text-base text-black hover:bg-lightgray focus:bg-lightgray/40" *ngFor="let menuItem of menuItems" [routerLink]="['/routing-test']">
         {{menuItem}}
       </button>
     </div>

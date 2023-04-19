@@ -7,10 +7,10 @@
 
   <div class="flex w-full flex-col items-center border-x-2 border-lightgray">
     <div class="flex w-full justify-end gap-x-10 px-8 py-2 text-lightgray">
-      <a href="" class="hover:text-cyan">About us</a>
-      <a href="" class="hover:text-cyan">Our Team</a>
-      <a href="" class="hover:text-cyan">News</a>
-      <a href="" class="hover:text-cyan">Contacts</a>
+      <button [routerLink]="['/routing-test']" href="" class="hover:text-cyan">About us</button>
+      <button [routerLink]="['/routing-test']" href="" class="hover:text-cyan">Our Team</button>
+      <button [routerLink]="['/routing-test']" href="" class="hover:text-cyan">News</button>
+      <button [routerLink]="['/routing-test']" href="" class="hover:text-cyan">Contacts</button>
     </div>
 
     <div
@@ -23,11 +23,12 @@
           placeholder="What are you looking for?"
           class="w-full "
         />
-        <button class="rounded-full hover:bg-lightgray active:bg-lightgray/60 py-1 px-1" [routerLink]="">
+        <button class="rounded-full hover:bg-lightgray active:bg-lightgray/60 py-1 px-1" [routerLink]="['/routing-test']">
           <img src="../../../assets/icons/search.svg" alt="" class="h-6 w-6" />
         </button>
         <mat-autocomplete #auto="matAutocomplete">
           <mat-option
+          
             *ngFor="let searchHits of searchHits"
             [value]="searchHits.title"
           >
@@ -52,7 +53,7 @@
           ]"
         />
         <button
-          class="rounded bg-white px-4 py-2 text-black hover:text-cyan focus:text-cyan"
+          class="rounded bg-white px-4 py-2 text-black hover:text-cyan focus:text-cyan" [routerLink]="['/routing-test']"
         >
           Education
         </button>
