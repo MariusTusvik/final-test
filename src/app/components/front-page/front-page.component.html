@@ -7,7 +7,7 @@
       <p class="text-3xl">We are very cool and have been since 2010</p>
     </div>
     <p class="font-sofachrome-italic mirror-text text-7xl">BAUM AI</p>
-    <p class="text-xl mt-2">{{ moscowTime }} - Moscow, Russia</p>
+    <p class="mt-2 text-xl">{{ moscowTime }} - Moscow, Russia</p>
   </div>
   <div class="img-crop1-img h-full w-2/4 bg-cover bg-no-repeat">
     <div class="img-crop1-img-bg h-full bg-teal/40"></div>
@@ -57,14 +57,24 @@
     </p>
     <div class="flex gap-x-8">
       <button
-        class="flex w-60 justify-center gap-x-4 border-black bg-black py-4 text-white border-2 hover:bg-white hover:text-black"
+        class="flex w-60 items-center justify-center gap-x-4 border-2 border-black bg-black py-4 text-white hover:bg-white hover:text-black"
       >
         Baum UDS
+        <img
+          src="../../../assets/icons/arrow-right.svg"
+          alt=""
+          class="h-6 w-6"
+        />
       </button>
       <button
-        class="flex w-60 justify-center gap-x-4 border-black bg-black py-4 text-white border-2 hover:bg-white hover:text-black"
+        class="flex w-60 items-center justify-center gap-x-4 border-2 border-black bg-black py-4 text-white hover:bg-white hover:text-black"
       >
         Baum SWARM
+        <img
+          src="../../../assets/icons/arrow-right.svg"
+          alt=""
+          class="h-6 w-6"
+        />
       </button>
     </div>
   </div>
@@ -186,7 +196,7 @@
       massa, eget aliquet nisl nisl sit amet mauris.
     </p>
   </div>
-  <div class="max-w-7xl mx-auto">
+  <div class="mx-auto max-w-7xl">
     <mat-tab-group>
       <mat-tab label="Management"> <app-employees></app-employees></mat-tab>
       <mat-tab label="Economy"> <app-employees></app-employees></mat-tab>
